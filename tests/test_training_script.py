@@ -35,7 +35,7 @@ def test_fast_dev_run(tmp_path):
         fast_dev_run=True, # Runs 1 batch then stops
         accelerator="cpu",
         logger=False,
-        checkpoint_callback=False
+        enable_checkpointing=False
     )
     
     # 4. Run

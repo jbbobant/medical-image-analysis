@@ -2,6 +2,7 @@ from typing import Any, List, Optional
 import torch
 import pytorch_lightning as pl
 from torch.optim import Adam
+import matplotlib.pyplot as plt
 
 from src.models.unet import UNet
 from utils.metrics import DiceScore
@@ -25,6 +26,7 @@ class TumorSegmentationTask(pl.LightningModule):
 
     def training_step(self, batch, batch_idx):
         ct, mask = batch
+        mask = mask.float()
         logits = self(ct)
         
         loss = self.loss_fn(logits, mask)
@@ -41,6 +43,7 @@ class TumorSegmentationTask(pl.LightningModule):
 
     def validation_step(self, batch, batch_idx):
         ct, mask = batch
+        mask = mask.float()
         logits = self(ct)
         
         loss = self.loss_fn(logits, mask)
