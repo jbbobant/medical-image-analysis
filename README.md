@@ -7,7 +7,7 @@
 
 **LungNet** is a deep learning framework designed to automate the detection and segmentation of lung tumors from 3D Computed Tomography (CT) scans. By leveraging a slice-by-slice 2D U-Net architecture, this project translates volumetric medical imaging data into precise, pixel-wise tumor masks, aiding in early diagnosis and radiomic analysis.
 
-## 🎯 Project Overview & Medical Relevance
+##  Project Overview & Medical Relevance
 
 Manual segmentation of lung nodules is a labor-intensive and highly subjective task for radiologists. 
 
